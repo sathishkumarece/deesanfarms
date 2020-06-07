@@ -1,0 +1,109 @@
+@import 'deesan-frams-scss/variable';
+@import 'deesan-frams-scss/_cards';
+@import 'deesan-frams-scss/home';
+
+#app {
+  font-family: Montserrat,Helvetica Neue,Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
+
+.parallax {
+
+  /* Set a specific height */
+  height: $primary-parallax-height;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.8);
+}
+
+
+
+.parallax-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.sibling{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: $gradient-effect-top;
+}
+
+.parallax-sibling{
+  @extend .sibling
+}
+
+.navbar-nav{
+  .nav-item{
+    a{
+      color: #ffffff !important
+    }
+  }
+}
+
+.bg-color{
+  background-color: $primary-color;
+}
+
+.navbar-static{
+  background-color: $primary-color;
+  height: 55px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.nav-link-title{
+  font-family: $title-font-family;
+  font-weight: 500;
+}
+
+/* SCSS properties for Split view */
+
+.split-title{
+  font-family: $title-font-family;
+  font-weight: 700;
+}
+
+.split-image-align-left {
+  width: 100%;
+  object-fit: cover;
+  height: 300px;
+  padding: 5px;
+  border-radius: 30px;
+  -webkit-box-shadow: $image-box-shadow;
+  box-shadow: $image-box-shadow;
+  background-size: cover;
+}
+
+.navbar-brand{
+  strong{
+    color: #ffffff;
+  }
+  &:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}

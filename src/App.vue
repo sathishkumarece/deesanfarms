@@ -1,32 +1,44 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Header></Header>
+    <!-- <Home></Home> -->
+    <router-view />
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Header from './components/Header'
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+export default {
+  components: {
+    Header
+  },
+  metaInfo () {
+    return {
+      titleTemplate: '%s | Deesan Farms',
+      meta: [
+        {
+          name: 'keywords',
+          content: 'deesanfarms, deesan farms, organic, organic vegetables, cold press oil'
+        },
+        {
+          name: 'author',
+          content: 'Sathishkumar NATARAJ | sathishkumarece@gmail.com'
+        },
+        {
+          name: 'og:type',
+          content: 'Website'
+        },
+        {
+          name: 'twitter:card',
+          content: 'Summary'
+        },
+        {
+          name: 'twitter:creator',
+          content: 'Sathishkumar NATARAJ | sathishkumarece@gmail.com'
+        }
+      ]
     }
   }
 }
-</style>
+</script>

@@ -1,0 +1,18 @@
+[
+    {
+        "type": "coconut",
+        "image": "../img/bg2.jpg"
+    },
+    {
+        "type": "dairy",
+        "image": "../img/bg1.jpg"
+    },
+    {
+        "type": "vegetables",
+        "image": "../img/bg6.jpg"
+    },
+    {
+        "type": "Oil",
+        "image": "../img/bg1.jpg"
+    }
+]
