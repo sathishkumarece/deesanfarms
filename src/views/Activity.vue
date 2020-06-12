@@ -1,14 +1,21 @@
 <template>
     <div>
       <div class="navbar-static"></div>
-      <h3>Inside activity</h3>
-      <h2>Activity: {{ $route.params.type }}</h2>
+      <div class="container">
+        <h3>Inside activity</h3>
+        <h2>Activity: {{ $route.params.type }}</h2>
+      </div>
     </div>
 </template>
 
 <script>
 export default {
   name: 'Activity',
+  data () {
+    return {
+      description: 'Activity like coconut, dairy, oil, vegetable at DeesanFarms'
+    }
+  },
   metaInfo () {
     return {
       title: this.$route.params.type,

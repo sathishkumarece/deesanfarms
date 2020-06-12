@@ -20,7 +20,8 @@ export default {
   data () {
     return {
       image: '../img/bg6.jpg',
-      activities: []
+      activities: [],
+      description: 'Various Activities at DessanFarms'
     }
   },
   metaInfo () {

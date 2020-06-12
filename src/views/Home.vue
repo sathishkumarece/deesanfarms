@@ -8,6 +8,7 @@
       <img alt="Vue logo" src="../assets/logo.png" />
       <HelloWorld msg="Welcome to Your Vue.js App" />
     </div> -->
+    <h1 class="app-title">Organic Farm</h1>
     <div class="container">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto text-center">

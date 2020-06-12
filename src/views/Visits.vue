@@ -6,8 +6,10 @@
     </div>
     <div class="container">
       <h2>Inside Visits view</h2>
-      <SplitView v-for="(visit, index) in visits" :key="visit.date" :title="visit.date"
-      :image="visit.image" :content="visit.info" :reverse="index%2 === 1"></SplitView>
+      <transition-group name="slide">
+        <SplitView v-for="(visit, index) in visits" :key="visit.date" :title="visit.date"
+        :image="visit.image" :content="visit.info" :reverse="index%2 === 1"></SplitView>
+      </transition-group>
     </div>
   </div>
 </template>
@@ -21,7 +23,8 @@ export default {
   data () {
     return {
       image: '../img/bg2.jpg',
-      visits: []
+      visits: [],
+      description: 'Visits at DeesanFarms'
     }
   },
   metaInfo () {

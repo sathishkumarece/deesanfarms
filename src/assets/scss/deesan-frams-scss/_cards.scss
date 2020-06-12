@@ -44,7 +44,7 @@
         width: 100%;
         height: 100%;
         background: $gradient-effect-bottom;
-        color: white;
+        color: $primary-text-color;
         
         h5 {
             @extend .position;
