@@ -7,8 +7,14 @@
     <div class="container">
       <h2>Inside Visits view</h2>
       <transition-group name="slide">
-        <SplitView v-for="(visit, index) in visits" :key="visit.date" :title="visit.date"
-        :image="visit.image" :content="visit.info" :reverse="index%2 === 1"></SplitView>
+        <SplitView
+          v-for="(visit, index) in visits"
+          :key="visit.date"
+          :title="visit.date"
+          :image="visit.image"
+          :content="visit.info"
+          :reverse="index%2 === 1"
+        ></SplitView>
       </transition-group>
     </div>
   </div>
@@ -58,12 +64,35 @@ export default {
     Parallax,
     SplitView
   },
+  beforeMount () {
+    this.getInitialVisit()
+  },
   mounted () {
-    this.$http.get('../resources/visits.json').then(
-      response => {
-        this.visits = response.body
+    // this.$http.get('../resources/visits.json').then(response => {
+    //   this.visits = response.body
+    // })
+    this.scroll(this.visits)
+  },
+  methods: {
+    getInitialVisit () {
+      this.$http.get('../resources/visits.json').then(response => {
+        // console.log(response.body[0])
+        this.visits.push(response.body[0])
+        this.visits.push(response.body[1])
+      })
+    },
+    scroll (visits) {
+      window.onscroll = () => {
+        var bottomOfWindow = Math.round(document.documentElement.scrollTop) + window.innerHeight === document.documentElement.offsetHeight
+        if (bottomOfWindow) {
+          this.$http.get('../resources/visits.json').then(response => {
+            if (response.body.length > visits.length) {
+              this.visits.push(response.body[visits.length])
+            }
+          })
+        }
       }
-    )
+    }
   }
 }
 </script>
