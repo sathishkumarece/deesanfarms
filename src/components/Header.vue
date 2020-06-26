@@ -96,6 +96,11 @@ export default {
     toggleNavbar () {
       this.show = !this.show
     }
+  },
+  watch: {
+    '$route' () {
+      this.show = !this.show
+    }
   }
 }
 </script>

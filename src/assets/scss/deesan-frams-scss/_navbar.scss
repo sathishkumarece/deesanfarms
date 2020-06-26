@@ -52,15 +52,16 @@ button.navbar-toggler {
   }
 }
 
-nav.navbarOpen{
-    .hamburger {
-        span {
-            width: 20px;
-            &:nth-child(2) {
-                width: 30px;
-            }
-        }
+nav.navbarOpen {
+  background-color: $primary-color;
+  .hamburger {
+    span {
+      width: 20px;
+      &:nth-child(2) {
+        width: 30px;
+      }
     }
+  }
 }
 
 .navbar-static {
@@ -121,8 +122,5 @@ nav.navbarOpen{
   }
   .nav-container {
     padding: 0.5rem 1rem !important;
-  }
-  .navbarOpen {
-    background-color: $primary-color;
   }
 }
