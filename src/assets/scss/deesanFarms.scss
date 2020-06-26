@@ -1,30 +1,17 @@
 @import 'deesan-frams-scss/variable';
 @import 'deesan-frams-scss/_cards';
 @import 'deesan-frams-scss/home';
+@import 'deesan-frams-scss/navbar';
 
 #app {
-  font-family: Montserrat,Helvetica Neue,Arial,sans-serif;
+  font-family: Montserrat, Helvetica Neue, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // text-align: center;
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-
 .parallax {
-
   /* Set a specific height */
   height: $primary-parallax-height;
 
@@ -36,57 +23,30 @@
   filter: brightness(0.8);
 }
 
-
-
-.parallax-container{
+.parallax-container {
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
-.sibling{
+.sibling {
   position: absolute;
   width: 100%;
   height: 100%;
   background: $gradient-effect-top;
 }
 
-.parallax-sibling{
-  @extend .sibling
+.parallax-sibling {
+  @extend .sibling;
 }
 
-.navbar-nav{
-  .nav-item{
-    a{
-      color: $primary-text-color !important;
-
-      // &:hover{
-      //   text-decoration: none;
-      // }
-    }
-  }
-}
-
-.bg-color{
+.bg-color {
   background-color: $primary-color;
-}
-
-.navbar-static{
-  background-color: $primary-color;
-  height: 55px;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
-.nav-link-title{
-  font-family: $title-font-family;
-  font-weight: 500;
 }
 
 /* SCSS properties for Split view */
 
-.split-title{
+.split-title {
   font-family: $title-font-family;
   font-weight: 700;
 }
@@ -102,99 +62,60 @@
   background-size: cover;
 }
 
-.navbar-brand{
-  strong{
-    color: $primary-text-color;
-  }
-  &:hover{
-    transform: scale(1.1);
-    cursor: pointer;
-  }
-}
-
-/*ul{
-  li{
-      background: none;
-      border: 0;
-      // box-sizing: border-box;
-      // margin: 1em;
-      // padding: 1em 2em;
-      
-      // Using inset box-shadow instead of border for sizing simplicity
-      // box-shadow: inset 0 0 0 2px $primary-color;
-      // color: $primary-color;
-      // font-size: inherit;
-      // font-weight: 700;
-    
-      // Required, since we're setting absolute on pseudo-elements
-      position: relative;
-      // vertical-align: middle;
-    
-      &::before,
-      &::after {
-        box-sizing: inherit;
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-      }
-  }
-}*/
-
 .draw {
   transition: color 0.25s;
 
-&::before,
-&::after {
-  // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
-  border: 2px solid transparent;
-  width: 0;
-  height: 0;
-}
+  &::before,
+  &::after {
+    // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+  }
 
-// This covers the top & right borders (expands right, then down)
-&::before {
-  top: 0;
-  left: 0;
-}
+  // This covers the top & right borders (expands right, then down)
+  &::before {
+    top: 0;
+    left: 0;
+  }
 
-// And this the bottom & left borders (expands left, then up)
-&::after {
-  bottom: 0;
-  right: 0;
-}
+  // And this the bottom & left borders (expands left, then up)
+  &::after {
+    bottom: 0;
+    right: 0;
+  }
 
-&:hover {
-  color: $primary-text-color;
-}
+  &:hover {
+    color: $primary-text-color;
+  }
 
-// Hover styles
-&:hover::before,
-&:hover::after {
-  width: 100%;
-  height: 100%;
-}
+  // Hover styles
+  &:hover::before,
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+  }
 
-&:hover::before {
-  border-top-color: $primary-text-color; // Make borders visible
-  border-right-color: $primary-text-color;
-  transition:
-    width 0.25s ease-out, // Width expands first
-    height 0.25s ease-out 0.25s; // And then height
-}
+  &:hover::before {
+    border-top-color: $primary-text-color; // Make borders visible
+    border-right-color: $primary-text-color;
+    transition: width 0.25s ease-out,
+      // Width expands first
+        height 0.25s ease-out 0.25s; // And then height
+  }
 
-&:hover::after {
-  border-bottom-color: $primary-text-color; // Make borders visible
-  border-left-color: $primary-text-color;
-  transition:
-    border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
-    width 0.25s ease-out 0.5s, // And then exanding width
-    height 0.25s ease-out 0.75s; // And finally height
-}
+  &:hover::after {
+    border-bottom-color: $primary-text-color; // Make borders visible
+    border-left-color: $primary-text-color;
+    transition: border-color 0s ease-out 0.5s,
+      // Wait for ::before to finish before showing border
+        width 0.25s ease-out 0.5s,
+      // And then exanding width
+        height 0.25s ease-out 0.75s; // And finally height
+  }
 }
 
 .meet {
-  
   &:hover {
     color: $primary-text-color;
   }
@@ -214,55 +135,68 @@
   &:hover::after {
     border-bottom-color: $primary-text-color;
     border-left-color: $primary-text-color;
-    transition: // Animate height first, then width
-      height 0.25s ease-out,
+    transition: // Animate height first, then width height 0.25s ease-out,
       width 0.25s ease-out 0.25s;
   }
-
 }
 
-.step-in{
-  background: linear-gradient(to bottom right, rgba(0, 162, 255, 0.1) 5%, rgba(0, 162, 255, 0.7) 5%, rgba(0, 162, 255, 0.3) 26%, rgba(0, 162, 255, 0.7) 45%, rgba(0, 162, 255, 0.3) 65%, rgba(0, 162, 255, 0.7) 95%, rgba(0, 162, 255, 0.1) 95%);
+.step-in {
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 162, 255, 0.1) 5%,
+    rgba(0, 162, 255, 0.7) 5%,
+    rgba(0, 162, 255, 0.3) 26%,
+    rgba(0, 162, 255, 0.7) 45%,
+    rgba(0, 162, 255, 0.3) 65%,
+    rgba(0, 162, 255, 0.7) 95%,
+    rgba(0, 162, 255, 0.1) 95%
+  );
 }
 
-.contact-color{
+.contact-color {
   background: $primary-color;
   color: $primary-text-color;
 }
 
-.text-align{
+.text-align {
   text-align: center;
   margin-top: 50px;
   text-decoration: underline;
 }
 
-.contact-align{
+.contact-container {
   @extend .contact-color;
   padding: 10px;
   border-radius: 10px;
   height: 100%;
 }
 
-.table-align{
+.table-align {
   margin-top: calc(10%);
   color: $primary-text-color !important;
 }
 
-.slide-enter-active{
+.slide-enter-active {
   animation: slide-in 2s ease-out forwards;
 }
 
-@keyframes slide-in{
-  from{
+@keyframes slide-in {
+  from {
     transform: translateY(20px);
   }
-  to{
+  to {
     transform: translateY(0);
   }
 }
 
 @media screen and (min-width: 768px) {
-  .table-align{
+  .table-align {
     margin-top: calc(30%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .map-container {
+    padding-top: 20px;
   }
 }

@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-md-4 col-sm-12">
           <!-- <div class="column"> -->
-            <div class="contact-align">
+            <div class="contact-container">
               <h5 class="text-align">Contact Us</h5>
                <table class="table table-align">
                 <tbody>
@@ -38,7 +38,7 @@
               </table>
             <!-- </div> -->
             <!-- <br>
-            <div class="contact-align">
+            <div class="contact-container">
               <h5 class="text-align">To Contact</h5>
               <div class="form">
                 <label for="val">Name</label>
@@ -53,21 +53,23 @@
           </div>
         </div>
         <div class="col-md-8 col-sm-12">
-          <google-map
-            :center="{lat: 10.654936, lng: 76.873489}"
-            :zoom="16"
-            map-type-id="terrain"
-            style="width: auto; height: 500px"
-          >
-            <google-marker
-              :key="index"
-              v-for="(m, index) in markers"
-              :position="m.position"
-              :clickable="true"
-              :draggable="true"
-              @click="center=m.position"
-            />
-          </google-map>
+          <div class="map-container">
+            <google-map
+              :center="{lat: 10.654936, lng: 76.873489}"
+              :zoom="16"
+              map-type-id="terrain"
+              style="width: auto; height: 500px"
+            >
+              <google-marker
+                :key="index"
+                v-for="(m, index) in markers"
+                :position="m.position"
+                :clickable="true"
+                :draggable="true"
+                @click="center=m.position"
+              />
+            </google-map>
+          </div>
         </div>
       </div>
     </div>

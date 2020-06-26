@@ -1,6 +1,6 @@
 <template>
-  <nav class="navbar fixed-top navbar-expand-lg scrolling-navbar" :class="{'bg-color':active}">
-    <div class="container">
+  <nav class="navbar fixed-top navbar-expand-lg scrolling-navbar" :class="{'bg-color':active,  'navbarOpen': show}">
+    <div class="container nav-container">
       <!-- Brand -->
       <a
         class="navbar-brand"
@@ -18,12 +18,17 @@
         aria-controls="navbarSupportedContent"
         aria-expanded="false"
         aria-label="Toggle navigation"
+        @click.stop="toggleNavbar()"
       >
-        <span class="navbar-toggler-icon"></span>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </button>
 
       <!-- Links -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" :class="{'show': show }">
         <!-- Right -->
         <ul class="navbar-nav ml-auto nav-link-title">
           <li class="nav-item nav-link">
@@ -69,7 +74,8 @@ export default {
   name: 'Header',
   data () {
     return {
-      active: false
+      active: false,
+      show: false
     }
   },
   mounted () {
@@ -86,6 +92,9 @@ export default {
       } else {
         this.active = false
       }
+    },
+    toggleNavbar () {
+      this.show = !this.show
     }
   }
 }
