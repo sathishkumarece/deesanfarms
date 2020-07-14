@@ -98,8 +98,10 @@ export default {
     }
   },
   watch: {
-    '$route' () {
-      this.show = !this.show
+    '$route' (to, from) {
+      if (this.show) {
+        this.show = !this.show
+      }
     }
   }
 }
