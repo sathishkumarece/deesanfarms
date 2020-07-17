@@ -37,6 +37,11 @@ const routes = [
     path: '/activity/:type',
     name: 'Activity',
     component: () => import('../views/Activity')
+  },
+  {
+    path: '/awards',
+    name: 'Awards',
+    component: () => import('../views/Awards')
   }
 ]
 

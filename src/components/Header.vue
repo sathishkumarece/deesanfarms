@@ -43,19 +43,22 @@
           <li class="nav-item nav-link">
             <router-link to="/contact">Contact</router-link>
           </li>
+          <li class="nav-item nav-link">
+            <router-link to="/awards">Awards</router-link>
+          </li>
           <li class="nav-item">
-            <a href="https://www.facebook.com/mdbootstrap" class="nav-link" target="_blank">
+            <a href="https://www.facebook.com/sathishkumarece95" class="nav-link" target="_blank">
               <i class="fab fa-facebook-f"></i>
             </a>
           </li>
           <li class="nav-item">
-            <a href="https://twitter.com/MDBootstrap" class="nav-link" target="_blank">
+            <a href="https://twitter.com/sathish95" class="nav-link" target="_blank">
               <i class="fab fa-twitter"></i>
             </a>
           </li>
           <li class="nav-item">
             <a
-              href="https://github.com/mdbootstrap/bootstrap-material-design"
+              href="https://github.com/sathishkumarece"
               class="nav-link"
               target="_blank"
             >

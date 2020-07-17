@@ -11,7 +11,7 @@
   color: #2c3e50;
 }
 
-.parallax {
+.image-containter{
   /* Set a specific height */
   height: $primary-parallax-height;
 
@@ -19,8 +19,15 @@
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+}
+.parallax {
+  @extend .image-containter;
   background-size: cover;
   filter: brightness(0.8);
+}
+
+.confetti-img {
+  @extend .image-containter
 }
 
 .parallax-container {
@@ -179,6 +186,16 @@
 .slide-enter-active {
   animation: slide-in 2s ease-out forwards;
 }
+
+// confetti area
+#confetti{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
 
 @keyframes slide-in {
   from {
