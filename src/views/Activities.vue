@@ -21,7 +21,7 @@ export default {
     return {
       image: '../img/bg6.jpg',
       activities: [],
-      description: 'Various Activities at DessanFarms'
+      description: 'Various Activities at DeesanFarms'
     }
   },
   metaInfo () {

@@ -3,6 +3,9 @@
     <div class="parallax-container">
       <Parallax :image="image"></Parallax>
       <div class="parallax-sibling"></div>
+      <div class="heading-text">
+        <h2>Visits</h2>
+      </div>
     </div>
     <div class="container">
       <h2>Inside Visits view</h2>
@@ -21,14 +24,14 @@
 </template>
 
 <script>
-import Parallax from '../components/Parallax'
+import Parallax from '../components/ParallaxSlide'
 import SplitView from '../components/SplitView'
 
 export default {
   name: 'Visits',
   data () {
     return {
-      image: '../img/bg2.jpg',
+      image: '../img/nature-scenery-wallpaper-2048x1152.jpg',
       visits: [],
       description: 'Visits at DeesanFarms'
     }

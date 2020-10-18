@@ -90,7 +90,7 @@ export default {
   methods: {
     scrollListener () {
       const yAxis = window.pageYOffset
-      if (yAxis > 300) {
+      if (yAxis > 500) {
         this.active = true
       } else {
         this.active = false
