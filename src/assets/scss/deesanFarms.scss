@@ -58,7 +58,6 @@
   color: $primary-text-color;
   position: absolute;
   z-index: 10;
-  font-size: 40px;
   top: 50vh;
   border-top: 1px dashed #fff;
   border-bottom: 1px dashed #fff;
@@ -69,6 +68,7 @@
   padding: 30px;
   h2 {
     text-align: center;
+    margin-bottom: 0px !important;
   }
 }
 
