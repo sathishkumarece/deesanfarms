@@ -8,7 +8,7 @@
       <img alt="Vue logo" src="../assets/logo.png" />
       <HelloWorld msg="Welcome to Your Vue.js App" />
     </div> -->
-    <h1 class="app-title">Organic Farm</h1>
+    <div class="app-title">Organic Farm</div>
     <div class="container">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto text-center">
@@ -61,8 +61,9 @@ export default {
   name: 'Home',
   data () {
     return {
-      image: '../img/bg6.jpg',
-      description: 'Organic farms composite of Milk product, vegetables, coconut byproduct'
+      image: '../img/bg7.jpg',
+      description: 'Template website to show products & activities of organic farm. Tech Stack: Vue'
+      // description: 'Organic farms composite of Milk product, vegetables, coconut byproduct'
     }
   },
   metaInfo () {
@@ -74,11 +75,13 @@ export default {
           content: this.description
         },
         {
-          name: 'og:title',
+          name: 'title',
+          property: 'og:title',
           content: 'Deesan Farms'
         },
         {
-          name: 'og:description',
+          name: 'description',
+          property: 'og:description',
           content: this.description
         },
         {

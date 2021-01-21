@@ -1,10 +1,14 @@
 
 .app-title{
     position: relative;
-    color: $primary-text-color;
-    font-weight: 700;
+    color: #000000;
+    font-size: 10vw;
+    font-weight: 800;
     top: -400px;
     text-align: center;
+    background: linear-gradient(to bottom, #dadada, #59332c);
+    mix-blend-mode: screen;
+    text-transform: uppercase;
 }
 
 .title {
@@ -110,4 +114,22 @@ p {
             position: absolute;
         }
     }
+
+    .app-title{
+        font-size: 7vw;
+    }
 }
+
+// video{
+//     position: absolute;
+    // min-width: 100%;
+    // min-height: 100%;
+    // top: 50%;
+    // left: 50%;
+    // width: auto;
+    // height: 100vh;
+    // -webkit-transform: translateX(-50%) translateY(-50%) translateZ(-1px) scale(2);
+    // -moz-transform: translateX(-50%) translateY(-50%) translateZ(-1px) scale(2);
+    // transform: translateX(-50%) translateY(-50%) translateZ(-1px) scale(2);
+//     z-index: 1
+// }
